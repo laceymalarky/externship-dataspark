@@ -54,3 +54,4 @@ answer_gen_top5 = pd.DataFrame(answer_gen_top5, columns=['generated_text'])
 top5_gen_answ = answer_gen_top5.join(top5[['similarity']])
 
 st.write(top5_gen_answ)
+###
