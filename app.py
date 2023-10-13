@@ -10,13 +10,13 @@ import plotly.express as px
 
 # Load Data
 df = pd.read_csv(
-    '/Users/laceymalarky/git_projects/TripleTen_projects/TripleTen_projects/externship-dataspark/python_q_a_clean_score3_AandQwc50.csv')
+    '/Users/laceymalarky/git_projects/TripleTen_projects/TripleTen_projects/externship-dataspark/data/python_q_a_clean_score3_AandQwc50.csv')
 df['title_question'] = df.title + '. ' + df.question
 
 # Deserialize docs
 nlp = spacy.load("en_core_web_md")
 doc_bin = DocBin().from_disk(
-    "/Users/laceymalarky/git_projects/TripleTen_projects/TripleTen_projects/externship-dataspark/python_qa_titlequest.spacy")
+    "/Users/laceymalarky/git_projects/TripleTen_projects/TripleTen_projects/externship-dataspark/data/python_qa_titlequest.spacy")
 docs = list(doc_bin.get_docs(nlp.vocab))
 
 # User inputs question
