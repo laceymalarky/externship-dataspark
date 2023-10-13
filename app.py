@@ -8,6 +8,11 @@ from spacy.tokens import DocBin
 import streamlit as st
 import plotly.express as px
 
+st.set_page_config(layout="wide")
+
+st.title('DataSpeak Q&A Chatbot')
+
+
 # Load Data
 df = pd.read_csv(
     '/Users/laceymalarky/git_projects/TripleTen_projects/TripleTen_projects/externship-dataspark/data/python_q_a_clean_score3_AandQwc50.csv')
@@ -20,7 +25,9 @@ doc_bin = DocBin().from_disk(
 docs = list(doc_bin.get_docs(nlp.vocab))
 
 # User inputs question
-input_question = st.text_input(label='input question here', value="")
+input_question = st.text_area(
+    label='Ask a Question:', value="", placeholder='Ask a Question', label_visibility="hidden")
+
 
 # Calculate cosine similarity of input question, return top 5 questions in data
 similarity = []
@@ -34,7 +41,6 @@ top5 = pd.DataFrame(np.array(similarity).T, columns=[
 top5 = top5.drop_duplicates()[:5]
 top5 = top5.join(df[['title', 'question', 'title_question']]
                  ).reset_index(drop=True)
-st.write(top5)
 
 # Generate top 5 answers using top 5 title+quesitons from similarity analysis and % similarity
 
@@ -53,5 +59,8 @@ answer_gen_top5 = generate_5_answers(top5['title_question'])
 answer_gen_top5 = pd.DataFrame(answer_gen_top5, columns=['generated_text'])
 top5_gen_answ = answer_gen_top5.join(top5[['similarity']])
 
-st.write(top5_gen_answ)
-###
+# Format output table
+top5_gen_answ['similarity'] = top5_gen_answ['similarity'].map('{:.0%}'.format)
+top5_gen_answ.columns = ['Possible Answer', '% Confidence']
+
+st.table(top5_gen_answ)
