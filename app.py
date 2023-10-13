@@ -8,10 +8,9 @@ from spacy.tokens import DocBin
 import streamlit as st
 import plotly.express as px
 
-st.set_page_config(layout="wide")
+# st.set_page_config(layout="wide")
 
 st.title('DataSpeak Q&A Chatbot')
-
 
 # Load Data
 df = pd.read_csv(
