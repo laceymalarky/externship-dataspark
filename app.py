@@ -4,10 +4,9 @@ import pandas as pd
 import numpy as np
 import spacy
 from spacy.tokens import DocBin
-
 import streamlit as st
-import plotly.express as px
 
+# Streamlit app titles
 st.title(':orange[DataSpeak] Q&A Chatbot💬')
 st.caption(
     'The bot will return the top 5 possible answers to your question.')
@@ -17,7 +16,7 @@ df = pd.read_csv(
     '/Users/laceymalarky/git_projects/TripleTen_projects/TripleTen_projects/externship-dataspeak/data/python_q_a_clean_score3_AandQwc50.csv')
 df['title_question'] = df.title + '. ' + df.question
 
-# Deserialize docs
+# Deserialize NLP docs
 nlp = spacy.load("en_core_web_md")
 doc_bin = DocBin().from_disk(
     "/Users/laceymalarky/git_projects/TripleTen_projects/TripleTen_projects/externship-dataspeak/data/python_qa_titlequest.spacy")
@@ -27,6 +26,7 @@ docs = list(doc_bin.get_docs(nlp.vocab))
 # input_question = st.text_area(
 #    label='Ask a Question:', value="", placeholder='Ask a Question', label_visibility="hidden")
 
+# When a user submits a question, generate top 5 answers
 prompt = st.chat_input("Ask a Question")
 if prompt:
     st.write(f"User has asked the following question: {prompt}")
