@@ -1,4 +1,5 @@
 # Initialization
+import spacy.cli
 from transformers import pipeline
 import pandas as pd
 import numpy as np
@@ -15,6 +16,9 @@ st.caption(
 df = pd.read_csv(
     'python_q_a_clean_score3_AandQwc50.csv')
 df['title_question'] = df.title + '. ' + df.question
+
+# Dowload spacy model
+spacy.cli.download("en_core_web_md")
 
 # Deserialize NLP docs
 nlp = spacy.load("en_core_web_md")
