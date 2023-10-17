@@ -6,6 +6,7 @@ import numpy as np
 import spacy
 from spacy.tokens import DocBin
 import streamlit as st
+import en_core_web_sm
 
 # Streamlit app titles
 st.title(':orange[DataSpeak] Q&A Chatbot💬')
