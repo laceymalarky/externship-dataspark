@@ -18,10 +18,10 @@ df = pd.read_csv(
 df['title_question'] = df.title + '. ' + df.question
 
 # Dowload spacy model
-spacy.cli.download("en_core_web_md")
+spacy.cli.download("en_core_web_sm")
 
 # Deserialize NLP docs
-nlp = spacy.load("en_core_web_md")
+nlp = spacy.load("en_core_web_sm")
 doc_bin = DocBin().from_disk(
     "python_qa_titlequest.spacy")
 docs = list(doc_bin.get_docs(nlp.vocab))
