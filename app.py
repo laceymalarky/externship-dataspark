@@ -18,7 +18,7 @@ df = pd.read_csv(
 df['title_question'] = df.title + '. ' + df.question
 
 # Dowload spacy model
-spacy.cli.download("en_core_web_sm")
+# spacy.cli.download("en_core_web_sm")
 
 # Deserialize NLP docs
 nlp = spacy.load("en_core_web_sm")
