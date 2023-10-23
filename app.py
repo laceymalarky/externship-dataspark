@@ -34,7 +34,7 @@ docs = list(doc_bin.get_docs(nlp.vocab))
 # When a user submits a question, generate top 5 answers
 prompt = st.chat_input("Ask a Question")
 if prompt:
-    st.markdown(f"**Question**: {prompt}")
+    st.write(f"**Question**: {prompt}")
 
     input_question = prompt
 
@@ -43,7 +43,8 @@ if prompt:
                          model="lmalarky/flan-t5-base-finetuned-python_qa_v2")
     answer_t5_main = generator(f"answer the question: {input_question}")
 
-    st.markdown(f"**Answer:** {answer_t5_main[0]['generated_text']}")
+    st.write(f"**Answer:** {answer_t5_main[0]['generated_text']}")
+    st.divider()
 
     # Calculate cosine similarity of input question, return top 5 questions in data
     st.write(f"Here are 5 additional possible answers:")
