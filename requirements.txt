@@ -5,4 +5,4 @@ transformers==4.34.0
 spacy==3.7.0
 tensorflow==2.13.0
 torch==2.0.1
-en_core_web_md
+en_core_web_md==3.7.0
