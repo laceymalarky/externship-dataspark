@@ -15,7 +15,7 @@ st.divider()
 
 # Load Data
 df = pd.read_csv(
-    '/datasets/python_q_a_clean_score3_AandQwc150.csv')
+    'datasets/python_q_a_clean_score3_AandQwc150.csv')
 df['title_question'] = df.title + '. ' + df.question
 
 # Dowload spacy model
@@ -24,7 +24,7 @@ spacy.cli.download("en_core_web_md")
 # Deserialize NLP docs
 nlp = spacy.load("en_core_web_md", disable=['parser', 'ner'])
 doc_bin = DocBin().from_disk(
-    "/datasets/python_qa_titlequest.spacy")
+    "datasets/python_qa_titlequest.spacy")
 docs = list(doc_bin.get_docs(nlp.vocab))
 
 # User inputs question
