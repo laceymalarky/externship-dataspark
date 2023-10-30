@@ -27,10 +27,6 @@ doc_bin = DocBin().from_disk(
     "datasets/python_qa_titlequest.spacy")
 docs = list(doc_bin.get_docs(nlp.vocab))
 
-# User inputs question
-# input_question = st.text_area(
-#    label='Ask a Question:', value="", placeholder='Ask a Question', label_visibility="hidden")
-
 # When a user submits a question, generate top 5 answers
 prompt = st.chat_input("Ask a Question")
 if prompt:
@@ -40,7 +36,7 @@ if prompt:
 
     # Generate top answer directly from user question
     generator = pipeline("text2text-generation",
-                         model="lmalarky/flan-t5-base-finetuned-python_qa_v2")
+                         model="lmalarky/flan-t5-base-finetuned-python_qa")
     answer_t5_main = generator(f"answer the question: {input_question}")
 
     st.write(f"**Answer:** {answer_t5_main[0]['generated_text']}")
@@ -67,7 +63,7 @@ if prompt:
         output = []
         for context in top5_input:
             generator = pipeline("text2text-generation",
-                                 model="lmalarky/flan-t5-base-finetuned-python_qa_v2")
+                                 model="lmalarky/flan-t5-base-finetuned-python_qa")
             answer_t5 = generator(f"answer the question: {context}")
             output.append(answer_t5[0]['generated_text'])
         return output
