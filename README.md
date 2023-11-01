@@ -16,7 +16,7 @@ Text2TextGeneration, Transformers, Tokenizers, PyTorch, Hugging Face, FLAN-T5, W
 
 ## Performance & Evaluation
 - Achieved a 19% ROUGE-1 score and an average perplexity of 1.96.
-- Demonstrated high efficience, with response times under 10 seconds.
+- Demonstrated high efficiency, with response times under 10 seconds.
   
 <img width="630" alt="Screenshot 2023-10-30 at 8 45 15 PM" src="https://github.com/laceymalarky/nlp_question_answer/assets/97048468/bc380430-48af-44fb-969f-198ba69053ba">
 
