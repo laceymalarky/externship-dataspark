@@ -13,10 +13,10 @@ Text2TextGeneration, Transformers, Tokenizers, PyTorch, Hugging Face, FLAN-T5 LL
 - The model is highly efficient, able to produce an answer in <10 seconds.
 - Pre-processed raw data to improve the quality of the training set.
 
-  
-
 <img width="630" alt="Screenshot 2023-10-30 at 8 45 15 PM" src="https://github.com/laceymalarky/nlp_question_answer/assets/97048468/bc380430-48af-44fb-969f-198ba69053ba">
-![Screenshot 2023-11-01 at 4 16 18 PM](https://github.com/laceymalarky/nlp_question_answer/assets/97048468/c94264f5-18cb-4ad3-8795-f8d64ec15a99)
+![Screenshot 2023-11-01 at 4 16 54 PM](https://github.com/laceymalarky/nlp_question_answer/assets/97048468/581f008c-d78d-46ed-ad36-42c236e58e59)
+
+## Screenshot of UI
 
 ## Requirements
 Python libraries: pandas, numpy, matplotlib, seaborn, scikit-learn, nltk, transformers, spacy, torch
