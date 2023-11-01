@@ -6,14 +6,16 @@ DataSpeak, one of the industry's largest providers of predictive analytics solut
 Text2TextGeneration, Transformers, Tokenizers, PyTorch, Hugging Face, FLAN-T5 LLM, GPU 
 
 ## Project Conclusions
-- Developed a generative fined-tuned version of [google/flan-t5-base](https://huggingface.co/google/flan-t5-base) large language model on the [Python Questions](https://www.kaggle.com/datasets/stackoverflow/pythonquestions) from Stack Overflow dataset which achives 19% ROUGE-1 score and average perplexity of 1.96.
+- Developed a [generative fined-tuned language model](https://huggingface.co/lmalarky/flan-t5-base-finetuned-python_qa) using `google/flan-t5-base`, trained on a Stack Overflow dataset, achieving 19% ROUGE-1 score and average perplexity of 1.96.
 - Performed time series analysis to reveal that the churn rate increased from 8% to 47% over the past 6 years with monthly seasonal swings of 9%.
 - Analyzed and pre-processed raw data, applied feature encoding and engineering to prepare features for modeling.
 
-  https://huggingface.co/lmalarky/flan-t5-base-finetuned-python_qa
   
+
+<img width="630" alt="Screenshot 2023-10-30 at 8 45 15 PM" src="https://github.com/laceymalarky/nlp_question_answer/assets/97048468/bc380430-48af-44fb-969f-198ba69053ba">
+
 ## Requirements
 Python libraries: pandas, numpy, matplotlib, seaborn, scikit-learn, nltk, transformers, spacy, torch
 
 ## Data Description:
-https://www.kaggle.com/datasets/stackoverflow/pythonquestions
+[Python Questions from Stack Overflow](https://www.kaggle.com/datasets/stackoverflow/pythonquestions)
