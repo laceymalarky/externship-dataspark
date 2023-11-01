@@ -6,10 +6,10 @@ DataSpeak, one of the industry's largest providers of predictive analytics solut
 Text2TextGeneration, Transformers, Tokenizers, PyTorch, Hugging Face, FLAN-T5, Word2Vec, Streamlit, Render, GPU 
 
 ## Project Conclusions
-- Developed a [generative fined-tuned language model](https://huggingface.co/lmalarky/flan-t5-base-finetuned-python_qa) using `google/flan-t5-base`, trained on a Stack Overflow dataset.
-- Performed cosine semantic similarity analysis on a generated vector embeddings database to match the user-input question to top 5-most similar questions in the dataset.
-- Built and a web application with a chatbot UI, that takes a user question and returns a generative answer from the model and generates 5 additional possible answers based on cosine similarity with percent similarity score.
-- Pre-processed raw data to improve the quality of the training set.
+- Developed a [generative language model](https://huggingface.co/lmalarky/flan-t5-base-finetuned-python_qa) using `google/flan-t5-base`, fine-tuned on Stack Overflow data.
+- Conducted cosine semantic similarity analysis on a generated vector embeddings database to identify the top 5 most similar questions in the dataset for user-input questions.
+- Developed a web application featuring a chatbot UI that provides generative answers from the model and generates 5 alternative answers based on cosine similarity, along with percent similarity scores.
+- Performed pre-processing of raw data to improve the quality of the training set.
 
 ## Screenshot of Web Application UI
 ![Screenshot 2023-11-01 at 4 22 20 PM](https://github.com/laceymalarky/nlp_question_answer/assets/97048468/d9656ec0-d0ad-4b78-ab85-b9c66bf527c1)
