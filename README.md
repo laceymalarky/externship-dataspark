@@ -14,7 +14,7 @@ Text2TextGeneration, Transformers, Tokenizers, PyTorch, Hugging Face, FLAN-T5 LL
 - Pre-processed raw data to improve the quality of the training set.
 
 <img width="630" alt="Screenshot 2023-10-30 at 8 45 15 PM" src="https://github.com/laceymalarky/nlp_question_answer/assets/97048468/bc380430-48af-44fb-969f-198ba69053ba">
-![Screenshot 2023-11-01 at 4 16 54 PM](https://github.com/laceymalarky/nlp_question_answer/assets/97048468/581f008c-d78d-46ed-ad36-42c236e58e59)
+![image](https://github.com/laceymalarky/nlp_question_answer/assets/97048468/04093c95-63e3-4f78-8604-8cc59cc4e0af)
 
 ## Screenshot of UI
 
