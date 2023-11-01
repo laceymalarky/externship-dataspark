@@ -6,8 +6,8 @@ DataSpeak, one of the industry's largest providers of predictive analytics solut
 Text2TextGeneration, Transformers, Tokenizers, PyTorch, Hugging Face, FLAN-T5 LLM, GPU 
 
 ## Project Conclusions
-- Developed a [generative fined-tuned language model](https://huggingface.co/lmalarky/flan-t5-base-finetuned-python_qa) using `google/flan-t5-base`, trained on a Stack Overflow dataset, achieving 19% ROUGE-1 score and average perplexity of 1.96.
-- Performed time series analysis to reveal that the churn rate increased from 8% to 47% over the past 6 years with monthly seasonal swings of 9%.
+- Developed a [generative fined-tuned language model](https://huggingface.co/lmalarky/flan-t5-base-finetuned-python_qa) using `google/flan-t5-base`, trained on a Stack Overflow dataset.
+- Achieved 19% ROUGE-1 score and an average perplexity of 1.96.
 - Analyzed and pre-processed raw data, applied feature encoding and engineering to prepare features for modeling.
 
   
