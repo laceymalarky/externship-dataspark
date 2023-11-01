@@ -8,7 +8,7 @@ Text2TextGeneration, Transformers, Tokenizers, PyTorch, Hugging Face, FLAN-T5, W
 ## Project Conclusions
 - Developed a [generative fined-tuned language model](https://huggingface.co/lmalarky/flan-t5-base-finetuned-python_qa) using `google/flan-t5-base`, trained on a Stack Overflow dataset.
 - Performed cosine semantic similarity analysis on a generated vector database to match the user-input question to top 5-most similar questions in the dataset.
-- Built and a web application with a chatbot UI, that takes a user question and returns a generative answer from the model and generates 5 additional possible answers based on cosine similarity.
+- Built and a web application with a chatbot UI, that takes a user question and returns a generative answer from the model and generates 5 additional possible answers based on cosine similarity with percent similarity score.
 - Pre-processed raw data to improve the quality of the training set.
 
 ## Screenshot of Web Application UI
