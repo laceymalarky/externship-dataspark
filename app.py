@@ -43,7 +43,7 @@ if prompt:
     st.divider()
 
     # Calculate cosine similarity of input question, return top 5 questions in data
-    st.write(f"Here are 5 additional possible answers:")
+    st.write(f"Here are 5 alternate answers:")
 
     similarity = []
     input_text = nlp(input_question)
@@ -75,6 +75,6 @@ if prompt:
     # Format output table
     top5_gen_answ['similarity'] = top5_gen_answ['similarity'].map(
         '{:.0%}'.format)
-    top5_gen_answ.columns = ['Possible Answer', '% Confidence']
+    top5_gen_answ.columns = ['Alternate Answer', '% Similarity']
 
     st.table(top5_gen_answ)
