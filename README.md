@@ -1,9 +1,9 @@
 # Generative Question and Answer Large Language Model
 ## Project Overview
-DataSpeak, one of the industry's largest providers of predictive analytics solutions, needed help developing a proof-of-concept machine learning model that can automatically generate answers to user-input questions.
+DataSpeak, one of the industry's largest providers of predictive analytics solutions, needed a proof-of-concept machine learning model that can automatically generate answers to user-input questions.
 
 ## Machine Learning Skills/Technologies
-Text2TextGeneration, Transformers, Tokenizers, PyTorch, Hugging Face, FLAN-T5, Word2Vec, Streamlit, Render, GPU 
+Text2TextGeneration, Transformers, Tokenizers, PyTorch, Hugging Face, Flan-T5 LLM, spaCy, Streamlit, Render, GPU, BeautifulSoup, Google Colab
 
 ## Project Conclusions
 - Developed a [generative language model](https://huggingface.co/lmalarky/flan-t5-base-finetuned-python_qa) using `google/flan-t5-base`, fine-tuned on Stack Overflow data.
